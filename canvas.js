@@ -2,7 +2,7 @@ window.onload=function(){
 
 	var canvas = document.getElementById('myCanvas');
 
-	canvas.addEventListener('mousedown', getPosition, false);
+	canvas.addEventListener('mousemove', getPosition, false);
 };
 
 function getPosition(){
@@ -11,6 +11,8 @@ function getPosition(){
 
 	x = event.x;
 	y = event.y;
-
-	alert("x-position: " + x +", y-position: " + y);
+var canvas = document.getElementById('myCanvas');
+	draw_it = canvas.getContext('2d');
+	draw_it.fillStyle = 'red';
+	draw_it.fillRect(x,y,5,5);
 }
