@@ -1,6 +1,4 @@
-body {
-}
-
-canvas {
-  border: 1px solid #000000;
+#myCanvas {
+	background-color: #000;
+	border: 5px solid red;
 }
