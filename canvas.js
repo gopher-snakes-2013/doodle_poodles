@@ -1,14 +1,7 @@
-var random = 5;
-
 window.onload=function(){
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
-//JS code goes in here
-
-<<<<<<< Updated upstream
-};
-=======
 	canvas.addEventListener('mousedown', startTracking, false);
 	
 	function startTracking(){
@@ -40,15 +33,5 @@ var ctx = canvas.getContext('2d');
 	draw_it.moveTo(xOld,yOld);
 	draw_it.lineTo(x,y);
 	draw_it.stroke();
-	}
-
-
-
-	
+	}	
 };
-
-
-
-
-
->>>>>>> Stashed changes
