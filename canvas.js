@@ -8,9 +8,7 @@ mouseOver = canvas.addEventListener('mouseover',saveEvent, false);
 mouseOut = canvas.removeEventListener('mouseout',drawSmoothLine, false);
 mouseMove = canvas.addEventListener('mousemove', getCurrentPosition);
 
-<<<<<<< Updated upstream
-};
-=======
+
 if (mouseDown){}
 if (mouseMove){}
 	drawSmoothLine();
@@ -109,6 +107,3 @@ if (mouseMove){}
 
 	
 // };
-
-
->>>>>>> Stashed changes
