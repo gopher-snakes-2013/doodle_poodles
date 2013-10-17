@@ -26,7 +26,7 @@ function getPosition() {
   draw_it = canvas.getContext('2d');
   draw_it.strokeStyle = 'red';
   draw_it.beginPath();
-  draw_it.moveTo(xOld,yOld);
+  draw_it.moveTo(oldX,oldY);
   draw_it.lineTo(x,y);
   draw_it.stroke();
 
