@@ -18,23 +18,19 @@ function initialize() {
 //   // if (canvas.addEventListener('touchend', stopTracking, false)){}
 // };
 
-function getPosition(e) {
+function getPosition() {
   event.preventDefault();
-  // oldX = x;
-  // oldY = y;
+  oldX = event.targetTouches[1].pageX;
+  oldY = event.targetTouches[1].pageY;
+
   x = event.targetTouches[0].pageX;
   y = event.targetTouches[0].pageY;
 
-
-
-
-  draw_it.fillStyle = "red";
-  draw_it.fillRect(x, y, 10, 10);
-  // draw_it.strokeStyle = 'red';
-  // draw_it.beginPath();
-  // draw_it.moveTo(oldX,oldY);
-  // draw_it.lineTo(x,y);
-  // draw_it.stroke();
+  draw_it.strokeStyle = 'red';
+  draw_it.beginPath();
+  draw_it.moveTo(oldX,oldY);
+  draw_it.lineTo(x,y);
+  draw_it.stroke();
 
 };
 
