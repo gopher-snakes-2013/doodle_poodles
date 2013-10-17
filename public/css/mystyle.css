@@ -1,4 +1,45 @@
-canvas {
-	background-color: #000;
-	border: 5px solid red;
+.container {
+  width: 960px;
+  margin: auto;
+  overflow: hidden;
 }
+
+canvas {
+  background-color: #000;
+  border: 5px dotted salmon;
+}
+
+
+/*p.dashed {
+  border-style: dashed;
+}*/
+
+nav ul {
+  width: 645px;
+  padding-left: 5px;
+  overflow: hidden;
+  background-color: #39C0CE;
+  margin-bottom: 0px;
+  list-style-type: none;
+}
+
+nav li {
+  display: block;
+  width: 214px;
+  text-align: center;
+  float: left;
+  /*margin: 16px 0px;*/
+  font-family: Arial;
+  text-shadow: 2px 2px 2px white;
+  background-color: #39C0CE;
+  padding: 10px 0;
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+nav li:hover {
+  background-color: white;
+  color: green;
+  border-radius: 10px;
+}
+
+
