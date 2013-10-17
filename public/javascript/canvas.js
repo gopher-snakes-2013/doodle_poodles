@@ -8,11 +8,20 @@ function startTracking(){
 
 
   x = event.targetTouches[0].pageX
-  alert(x)
   y = event.targetTouches[0].pageY;
+
+  canvas.addEventListener('touchmove' getPosition, false);
 
   // canvas.addEventListener('touchmove', getPosition, false);
   // if (canvas.addEventListener('touchend', stopTracking, false)){}
+};
+
+function getPosition() {
+  event.preventDefault();
+  oldX = x;
+  oldY = y;
+  alert(oldX);
+
 };
 
 //   function stopTracking(){
