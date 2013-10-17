@@ -5,16 +5,15 @@ var ctx = canvas.getContext('2d');
   canvas.addEventListener('touchstart', startTracking, false);
   
   function startTracking(){
-    event.preventDefault()
+    event.preventDefault();
 
-    x = event.x - canvas.offsetLeft;
-    y = event.y - canvas.offsetTop;
+    x = event.x;
+    y = event.y;
 
     alert("x = " x + " y = " y);
     // canvas.addEventListener('touchmove', getPosition, false);
     // if (canvas.addEventListener('touchend', stopTracking, false)){
-
-    }
+    // }
     
   }
 
