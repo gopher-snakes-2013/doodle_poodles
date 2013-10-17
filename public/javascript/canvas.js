@@ -1,7 +1,8 @@
 function initialize() {
   var canvas = document.getElementById("myCanvas");
+  draw_it = canvas.getContext('2d');
   // canvas.addEventListener('touchstart', startTracking, false);
-  canvas.addEventListener('touchstart', getPosition, false);
+  canvas.addEventListener('touchmove', getPosition, true);
 };
   
 // function startTracking(){
@@ -17,7 +18,7 @@ function initialize() {
 //   // if (canvas.addEventListener('touchend', stopTracking, false)){}
 // };
 
-function getPosition() {
+function getPosition(e) {
   event.preventDefault();
   // oldX = x;
   // oldY = y;
@@ -25,7 +26,8 @@ function getPosition() {
   y = event.targetTouches[0].pageY;
 
 
-  draw_it = canvas.getContext('2d');
+
+
   draw_it.fillStyle = "red";
   draw_it.fillRect(x, y, 10, 10);
   // draw_it.strokeStyle = 'red';
