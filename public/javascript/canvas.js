@@ -23,19 +23,19 @@ var ctx = canvas.getContext('2d');
   }
 
   function getPosition(){
-    alert("getPosition working")
-
     xOld = x;
     yOld = y;
 
     x = event.x;
     y = event.y;
 
-  draw_it = canvas.getContext('2d');
-  draw_it.strokeStyle = 'red';
-  draw_it.beginPath();
-  draw_it.moveTo(xOld,yOld);
-  draw_it.lineTo(x,y);
-  draw_it.stroke();
+    draw_it = canvas.getContext('2d');
+    // draw_it.strokeStyle = 'red';
+    // draw_it.fillStyle = 'red';
+    // draw_it.beginPath();
+    draw_it.rect(x, y, 5, 5);
+    // draw_it.moveTo(xOld,yOld);
+    // draw_it.lineTo(x,y);
+    // draw_it.stroke();
   } 
 };
