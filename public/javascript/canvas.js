@@ -17,7 +17,6 @@ function startTracking(){
 };
 
 function getPosition() {
-  event.preventDefault();
   oldX = x;
   oldY = y;
   alert(oldX);
