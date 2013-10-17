@@ -2,7 +2,7 @@ window.onload=function(){
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
-  canvas.addEventListener('touchstart', startTracking, false);
+  canvas.addEventListener('touchstart', getPosition, false);
   
   function startTracking(){
     // alert("startTracking started")
