@@ -52,5 +52,8 @@ erase.addEventListener('click', engageErase, false);
     }
   }
 
+var save = document.getElementById("myCanvas")
+save.toDataURL("image/jp")
+
  
 };
