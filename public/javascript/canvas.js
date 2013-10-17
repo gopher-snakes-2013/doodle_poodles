@@ -5,9 +5,9 @@ var ctx = canvas.getContext('2d');
   canvas.addEventListener('touchstart', startTracking, false);
   
   function startTracking(){
-    alert("startTracking started")
+    // alert("startTracking started")
     event.preventDefault()
-    
+
     x = event.x - canvas.offsetLeft;
     y = event.y - canvas.offsetTop;
     canvas.addEventListener('touchmove', getPosition, false);
@@ -23,12 +23,13 @@ var ctx = canvas.getContext('2d');
   }
 
   function getPosition(){
+    alert("getPosition working")
 
     xOld = x;
     yOld = y;
 
-    x = event.x - canvas.offsetLeft - 5;
-    y = event.y - canvas.offsetTop - 5;
+    x = event.x;
+    y = event.y;
 
   draw_it = canvas.getContext('2d');
   draw_it.strokeStyle = 'red';
