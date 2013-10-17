@@ -1,7 +1,10 @@
-window.onload=function(){
+function initialize() {
+
+
   var canvas = document.getElementById("myCanvas");
 
   canvas.addEventListener('touchstart', startTracking, false);
+}
   
   function startTracking(){
     event.preventDefault();
@@ -17,25 +20,25 @@ window.onload=function(){
     
   }
 
-  function stopTracking(){
-    canvas.removeEventListener('touchmove', getPosition, false);
+//   function stopTracking(){
+//     canvas.removeEventListener('touchmove', getPosition, false);
 
-  }
+//   }
 
-  function getPosition(){
-    event.preventDefault();
+//   function getPosition(){
+//     event.preventDefault();
 
-    xOld = x;
-    yOld = y;
+//     xOld = x;
+//     yOld = y;
 
-    x = event.targetTouches[0].pageX;
-    y = event.targetTouches[0].pageY;
+//     x = event.targetTouches[0].pageX;
+//     y = event.targetTouches[0].pageY;
 
-  draw_it = canvas.getContext('2d');
-  draw_it.strokeStyle = 'red';
-  draw_it.beginPath();
-  draw_it.moveTo(xOld,yOld);
-  draw_it.lineTo(x,y);
-  draw_it.stroke();
-  } 
-};
+//   draw_it = canvas.getContext('2d');
+//   draw_it.strokeStyle = 'red';
+//   draw_it.beginPath();
+//   draw_it.moveTo(xOld,yOld);
+//   draw_it.lineTo(x,y);
+//   draw_it.stroke();
+//   } 
+// };
