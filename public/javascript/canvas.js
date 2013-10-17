@@ -21,12 +21,12 @@ function getPosition() {
   event.preventDefault();
   // oldX = x;
   // oldY = y;
-  x = event.targetTouches[0].pageX
+  x = event.targetTouches[0].pageX;
   y = event.targetTouches[0].pageY;
 
 
   draw_it = canvas.getContext('2d');
-  draw_it.fillStyle="red";
+  draw_it.fillStyle = "red";
   draw_it.fillRect(x, y, 10, 10);
   // draw_it.strokeStyle = 'red';
   // draw_it.beginPath();
