@@ -1,7 +1,7 @@
 function initialize() {
   var canvas = document.getElementById("myCanvas");
   // canvas.addEventListener('touchstart', startTracking, false);
-  canvas.addEventListener('touchmove', getPosition, false);
+  canvas.addEventListener('touchstart', getPosition, false);
 };
   
 // function startTracking(){
