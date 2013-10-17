@@ -6,8 +6,10 @@ function initialize() {
 
 function getPosition() {
   event.preventDefault();
-  x = event.targetTouches[1].pageX;
-  y = event.targetTouches[1].pageY;
+  x = event.targetTouches[0].pageX;
+  y = event.targetTouches[0].pageY;
+  // oldX = targetTouches[1]
+  // oldY = targetTouches[1]
 
   draw_it.fillStyle = "red";
   draw_it.fillRect(x, y, 10, 10);
