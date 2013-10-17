@@ -22,9 +22,11 @@ function getPosition() {
   // oldY = y;
   x = event.targetTouches[0].pageX
   y = event.targetTouches[0].pageY;
-  alert(x)
 
-  // draw_it = canvas.getContext('2d');
+
+  draw_it = canvas.getContext('2d');
+  draw_it.rect(x, y, 10, 10);
+  draw_it.stroke();
   // draw_it.strokeStyle = 'red';
   // draw_it.beginPath();
   // draw_it.moveTo(oldX,oldY);
