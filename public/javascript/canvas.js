@@ -18,6 +18,7 @@ function initialize() {
 // };
 
 function getPosition() {
+  event.preventDefault();
   // oldX = x;
   // oldY = y;
   x = event.targetTouches[0].pageX
