@@ -23,6 +23,7 @@ window.onload=function(){
   }
 
   function getPosition(){
+    event.preventDefault();
 
     xOld = x;
     yOld = y;
