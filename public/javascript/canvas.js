@@ -5,9 +5,10 @@ function initialize() {
   
 function startTracking(){
   event.preventDefault();
-  alert("startTracking")
+
 
   x = event.targetTouches[0].pageX
+  alert(x)
   y = event.targetTouches[0].pageY;
 
   // canvas.addEventListener('touchmove', getPosition, false);
