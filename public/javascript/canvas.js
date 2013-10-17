@@ -1,24 +1,18 @@
 function initialize() {
-
-
   var canvas = document.getElementById("myCanvas");
-
   canvas.addEventListener('touchstart', startTracking, false);
-}
+};
   
-  function startTracking(){
-    event.preventDefault();
+function startTracking(){
+  event.preventDefault();
+  alert("startTracking")
 
-    x = event.targetTouches[0].pageX
-    y = event.targetTouches[0].pageY;
+  x = event.targetTouches[0].pageX
+  y = event.targetTouches[0].pageY;
 
-    alert("x = " x + " y = " y);
-
-    canvas.addEventListener('touchmove', getPosition, false);
-    if (canvas.addEventListener('touchend', stopTracking, false)){
-    }
-    
-  }
+  // canvas.addEventListener('touchmove', getPosition, false);
+  // if (canvas.addEventListener('touchend', stopTracking, false)){}
+};
 
 //   function stopTracking(){
 //     canvas.removeEventListener('touchmove', getPosition, false);
