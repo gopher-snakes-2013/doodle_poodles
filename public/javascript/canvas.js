@@ -1,6 +1,7 @@
 function initialize() {
   var canvas = document.getElementById("myCanvas");
   canvas.addEventListener('touchstart', startTracking, false);
+  canvas.addEventListener('touchmove', getPosition, false);
 };
   
 function startTracking(){
@@ -10,13 +11,14 @@ function startTracking(){
   x = event.targetTouches[0].pageX
   y = event.targetTouches[0].pageY;
 
-  canvas.addEventListener('touchmove' getPosition, false);
+  // canvas.addEventListener('touchmove' getPosition, false);
 
   // canvas.addEventListener('touchmove', getPosition, false);
   // if (canvas.addEventListener('touchend', stopTracking, false)){}
 };
 
 function getPosition() {
+  alert("Get Position on");
   oldX = x;
   oldY = y;
   alert(oldX);
