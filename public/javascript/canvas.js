@@ -5,6 +5,7 @@ var ctx = canvas.getContext('2d');
   canvas.addEventListener('touchstart', startTracking, false);
   
   function startTracking(){
+    event.preventDefault()
     x = event.x - canvas.offsetLeft;
     y = event.y - canvas.offsetTop;
     canvas.addEventListener('touchmove', getPosition, false);
