@@ -6,7 +6,7 @@ var ctx = canvas.getContext('2d');
   
   function startTracking(){
     event.preventDefault();
-
+    alert("start tracking working");
     x = event.x;
     y = event.y;
 
