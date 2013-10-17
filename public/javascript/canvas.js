@@ -1,7 +1,7 @@
 function initialize() {
   var canvas = document.getElementById("myCanvas");
   draw_it = canvas.getContext('2d');
-  canvas.addEventListener('touchmove', getPosition, true);
+  canvas.addEventListener('touchmove', getPosition, false);
 };
 
 function getPosition() {
@@ -16,5 +16,4 @@ function getPosition() {
   // draw_it.moveTo(oldX,oldY);
   // draw_it.lineTo(x,y);
   // draw_it.stroke();
-
 };
