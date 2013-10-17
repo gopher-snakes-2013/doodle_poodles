@@ -17,7 +17,11 @@ var ctx = canvas.getContext('2d');
   }
 
 
-};
+
+function getPosition(){
+
+  xOld = x;
+  yOld = y;
 
     x = event.x - canvas.offsetLeft - 5;
     y = event.y - canvas.offsetTop - 5;
@@ -50,8 +54,8 @@ erase.addEventListener('click', engageErase, false);
     }
   }
 
-var save = document.getElementById("myCanvas")
-save.toDataURL("image/jp")
+// var save = document.getElementById("myCanvas");
+// save.toDataURL("image/jp");
 
  
 };
