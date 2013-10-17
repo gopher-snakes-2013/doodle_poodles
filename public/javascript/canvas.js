@@ -5,8 +5,8 @@ var ctx = canvas.getContext('2d');
   canvas.addEventListener('touchstart', startTracking, false);
   
   function startTracking(){
-    event.preventDefault();
     alert("start tracking working");
+    event.preventDefault();
     x = event.x;
     y = event.y;
 
