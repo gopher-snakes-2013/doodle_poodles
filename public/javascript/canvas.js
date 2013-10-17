@@ -24,7 +24,7 @@ var ctx = canvas.getContext('2d');
 
     xOld = x;
     yOld = y;
-
+    event.preventDefault()
     x = event.x - canvas.offsetLeft - 5;
     y = event.y - canvas.offsetTop - 5;
 
