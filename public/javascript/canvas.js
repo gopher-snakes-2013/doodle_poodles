@@ -23,8 +23,9 @@ var ctx = canvas.getContext('2d');
   }
 
   function getPosition(){
-    xOld = x;
-    yOld = y;
+    event.preventDefault()
+    // xOld = x;
+    // yOld = y;
 
     x = event.x;
     y = event.y;
