@@ -9,8 +9,8 @@ function getPosition() {
   x = event.targetTouches[0].pageX
   y = event.targetTouches[0].pageY
 
-  xOld = targetTouches[1].pageX
-  yOld = targetTouches[1].pageY
+  xOld = targetTouches[1]
+  yOld = targetTouches[1]
 
   draw_it.fillStyle = "red";
   draw_it.fillRect(xOld, yOld, 10, 10);
