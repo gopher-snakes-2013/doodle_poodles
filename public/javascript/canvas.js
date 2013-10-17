@@ -13,7 +13,7 @@ function getPosition() {
   yOld = targetTouches[1]
 
   draw_it.fillStyle = "red";
-  draw_it.fillRect(xOld, yOld, 10, 10);
+  draw_it.fillRect(x, y, 1, 1);
   // draw_it.strokeStyle = 'red';
   // draw_it.beginPath();
   // draw_it.moveTo(oldX,oldY);
