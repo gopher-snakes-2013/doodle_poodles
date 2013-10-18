@@ -1,4 +1,5 @@
-window.onload=function(){
+function runDoodlePoodle() {
+
   var canvas = document.getElementById('myCanvas');
 
   canvas.addEventListener('mousedown', startTracking, false);
@@ -30,4 +31,4 @@ window.onload=function(){
     draw_it.lineTo(x,y);
     draw_it.stroke();
   }
-};
+}
