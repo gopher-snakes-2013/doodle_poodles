@@ -1,38 +1,41 @@
 window.onload=function(){
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
+// console.log(Thing.abc)
+var bigCanvas = new BigCanvas();
+console.log(bigCanvas.canvas)
 
   canvas.addEventListener('mousedown', startTracking, false);
   
   function startTracking(){
     x = event.x - canvas.offsetLeft;
     y = event.y - canvas.offsetTop;
-    canvas.addEventListener('mousemove', getPosition, false);
+    canvas.addEventListener('mousemove', bigCanvas.getPosition, false);
     if (canvas.addEventListener('mouseup', stopTracking, false)){
     }
   }
 
   function stopTracking(){
-    canvas.removeEventListener('mousemove', getPosition, false);
+    canvas.removeEventListener('mousemove', bigCanvas.getPosition, false);
   }
 
 
 
-function getPosition(){
+// function getPosition(){
 
-  xOld = x;
-  yOld = y;
+//   xOld = x;
+//   yOld = y;
 
-    x = event.x - canvas.offsetLeft - 5;
-    y = event.y - canvas.offsetTop - 5;
+//     x = event.x - canvas.offsetLeft - 5;
+//     y = event.y - canvas.offsetTop - 5;
 
-    draw_it = canvas.getContext('2d');
-    draw_it.strokeStyle = 'red';
-    draw_it.beginPath();
-    draw_it.moveTo(xOld,yOld);
-    draw_it.lineTo(x,y);
-    draw_it.stroke();
-    }
+//     draw_it = canvas.getContext('2d');
+//     draw_it.strokeStyle = 'red';
+//     draw_it.beginPath();
+//     draw_it.moveTo(xOld,yOld);
+//     draw_it.lineTo(x,y);
+//     draw_it.stroke();
+//     }
 
 var clear = document.getElementById("clear");
 clear.addEventListener('click', clearCanvas, false);
