@@ -2,6 +2,10 @@ window.onload=function(){
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
+var button = document.getElementById('saveImage');
+
+button.addEventListener("click", showImage, false);
+
   canvas.addEventListener('mousedown', startTracking, false);
   
   function startTracking(){
@@ -33,5 +37,13 @@ var ctx = canvas.getContext('2d');
   draw_it.moveTo(xOld,yOld);
   draw_it.lineTo(x,y);
   draw_it.stroke();
-  } 
+  }
+
+
+function showImage(){ 
+  var dataURL = canvas.toDataURL();
+  document.getElementById('canvasImg').src = dataURL; 
+  // console.log(dataURL);
+}
 };
+

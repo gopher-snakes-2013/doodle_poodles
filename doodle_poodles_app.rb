@@ -12,3 +12,7 @@ set :database, ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || "s
 get '/' do
   erb :index
 end
+
+get '/picture' do
+  erb :picture
+end
