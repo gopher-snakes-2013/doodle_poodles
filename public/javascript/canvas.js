@@ -1,8 +1,11 @@
 window.onload=function(){
   var canvas = document.getElementById('myCanvas');
-  var ctx = canvas.getContext('2d');
+  var draw_it = canvas.getContext('2d');
   
   canvas.addEventListener('mousedown', startTracking, false);
+  canvas.addEventListener('touchstart', touchPosition, false);
+  canvas.addEventListener('touchmove', touchDraw, false);
+
 
   function startTracking(){
     x = event.x - canvas.offsetLeft;
@@ -36,8 +39,9 @@ window.onload=function(){
   var clear = document.getElementById("clear");
   clear.addEventListener('click', clearCanvas, false);
 
+
   function clearCanvas(){
-    ctx.clearRect(0, 0, 640, 360);
+    draw_it.clearRect(0, 0, 640, 360);
   }
 
 
@@ -51,5 +55,28 @@ window.onload=function(){
     var colorDropdown = document.getElementById("color_pallet");
     return colorDropdown.value;
   }
+
+  function touchPosition() {
+    event.preventDefault();
+    x = event.targetTouches[0].pageX;
+    y = event.targetTouches[0].pageY; 
+  }
+
+
+  function touchDraw() {
+    var xOld = x;
+    var yOld = y;
+    x = event.targetTouches[0].pageX;
+    y = event.targetTouches[0].pageY;
+
+
+    var touches = event.targetTouches;
+    draw_it.strokeStyle = 'red';
+    draw_it.beginPath();
+    draw_it.moveTo(x,y);
+    draw_it.lineTo(xOld,yOld);
+    draw_it.stroke();
+  };
+
 };
 
