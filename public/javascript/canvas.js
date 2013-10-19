@@ -34,6 +34,7 @@ function getPosition(){
   draw_it.moveTo(xOld,yOld);
   draw_it.lineTo(x,y);
   draw_it.stroke();
+  draw_it.lineWidth = lineWidth();
 }
 
 var clear = document.getElementById("clear");
@@ -55,6 +56,14 @@ function engageErase(){
     ctx.clearRect(x, y, 10, 10);
   }
 }
+
+function lineWidth(){
+    penSize=[1, 3, 5]
+    var widthDropdown = document.getElementById("pen_size");
+  return penSize[widthDropdown.selectedIndex];
+
+}
+
 
 function colorPicker(){
   var colorDropdown = document.getElementById("color_pallet");
