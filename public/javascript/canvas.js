@@ -29,7 +29,7 @@ function getPosition(){
   y = event.y - canvas.offsetTop - 5;
 
   draw_it = canvas.getContext('2d');
-  draw_it.strokeStyle = 'red';
+  draw_it.strokeStyle = colorPicker();
   draw_it.beginPath();
   draw_it.moveTo(xOld,yOld);
   draw_it.lineTo(x,y);
@@ -54,5 +54,10 @@ function engageErase(){
     y = event.y - canvas.offsetTop - 5;
     ctx.clearRect(x, y, 10, 10);
   }
+}
+
+function colorPicker(){
+  var colorDropdown = document.getElementById("color_pallet");
+  return colorDropdown.value;
 }
 };
