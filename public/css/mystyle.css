@@ -5,7 +5,7 @@
 }
 
 canvas {
-  background-color: #000;
+  background-color: 'white';
   border: 5px dotted salmon;
 }
 
@@ -36,3 +36,4 @@ nav li:hover {
   color: green;
   border-radius: 10px;
 }
+
